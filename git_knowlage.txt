@@ -1,0 +1,54 @@
+一、创建git
+	1-进入目标目录
+	2-$ git init
+
+二、添加文件
+	1-$ git add 文件名.后缀 #修改后内容进入暂存区
+  	2-$ git commit -m "说明"  #暂存区修改内容提交
+
+
+三、查看当前状态
+	$ git status
+
+	三种状态提示：
+		文件被修改，未add：'Changes not staged for commit'
+		文件add，未commit：'Changes to be committed'
+		文件未改动或已完成commit: 'nothing to commit, working tree clean'
+
+四、查看修改内容
+	$ git diff 文件名.后缀
+	
+	$ git diff Head -- 文件名.后缀 
+	#查看工作区文件和当前版本库文件区别
+	
+五、查看修改日志
+	$ git log [--pretty=oneline]
+	
+六、回退版本
+	$ git --hard Head^^...^ #有几个'^'就回退几个版本
+	OR
+	$ git --hard Head~100 #回退100个版本
+	OR
+	$ git --head 版本号
+	
+七、查看操作记录
+	$ git relog
+	
+八、撤销修改
+	已经commit：回退一个版本
+	已经add：$ git reset 版本 文件名.后缀 #回退后会将工作区文件内容修改为所输入版本
+	add后撤销或未add： $ git checkout -- 文件名.后缀
+
+九、删除文件
+	$ git rm 文件名.后缀
+	
+十、远程库操作
+	关联远程库：$ git remote add origin git@server-name:path/repo-name.git
+	推送master分支：$ git push -u origin master #第一次推送
+					$ git push origin master #第二次及以后推送
+	克隆远程库：$ git clone git@server-name:path/repo-name.git
+	
+十一、
+
+
+
